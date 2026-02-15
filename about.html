@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About | Tandyala Guna Sekhar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* ================= MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .hero,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 300px;
+    height: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 18px 24px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 90px 20px 70px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .project-card,
+  .contact-info,
+  .contact-form {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-image img {
+    width: 240px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    overflow-x:hidden;
+    background:
+        radial-gradient(circle at top left, rgba(150, 59, 59, 0.25), transparent 45%),
+        radial-gradient(circle at top right, rgba(220, 38, 38, 0.35), transparent 45%),
+        #0b0616;
+}
+
+/* ========== DECOR ========== */
+.bg-blob{
+    position:absolute;
+    width:420px;height:420px;
+    background:radial-gradient(circle, rgba(64, 90, 98, 0.35), transparent 70%);
+    filter:blur(90px);
+    z-index:0;
+}
+.blob-1{top:-120px;left:-120px}
+.blob-2{top:140px;right:-160px}
+
+.dot-cluster{
+    position:absolute;
+    width:180px;height:180px;
+    background-image:radial-gradient(rgba(218, 81, 81, 0.18) 1.4px, transparent 1.4px);
+    background-size:14px 14px;
+    opacity:.55;
+    animation:floatDots 14s ease-in-out infinite;
+}
+.dots-1{top:260px;left:140px}
+.dots-2{top:460px;right:200px;animation-delay:5s}
+
+@keyframes floatDots{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+    100%{transform:translateY(0)}
+}
+
+/* ========== NAVBAR (SAME AS HOME) ========== */
+header{
+    padding:24px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+.logo{font-size:22px;font-weight:600}
+nav ul{list-style:none;display:flex;gap:32px}
+nav a{
+    color:#cfcfe3;
+    text-decoration:none;
+    font-size:14px;
+    padding:6px 12px;
+    border-radius:6px;
+}
+nav a.active{border:1px solid #8b5cf6;color:#fff}
+.contact-btn{
+    background:#8b5cf6;
+    padding:8px 18px;
+    border-radius:20px;
+    color:#fff!important;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header{
+    padding:65px 80px 30px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+.page-header h1{
+    font-size:48px;
+    margin-bottom:6px;
+}
+.page-header p{
+    font-size:15px;
+    color:#d1d5db;
+}
+
+/* Make everything flexible */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Images responsive */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* Navbar responsive */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  padding:0;
+}
+
+@media(max-width:768px){
+
+  nav ul{
+    flex-direction:column;
+    width:100%;
+    text-align:center;
+  }
+
+  h1{
+    font-size:26px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  .container{
+    padding:15px;
+  }
+
+  section{
+    padding:30px 15px;
+  }
+}
+
+
+/* ========== ABOUT CARD (REFERENCE STYLE) ========== */
+.about-card{
+    max-width:920px;
+    margin:50px auto 0;
+    background:linear-gradient(180deg,#1e1238,#120a24);
+    border-radius:22px;
+    padding:42px;
+    position:relative;
+    z-index:1;
+}
+.about-card h2{
+    font-size:26px;
+    margin-bottom:18px;
+}
+.about-card p{
+    font-size:15px;
+    line-height:1.9;
+    color:#d1d5db;
+    margin-bottom:16px;
+}
+
+/* Resume button */
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:26px;
+    padding:12px 26px;
+    background:#8b5cf6;
+    border-radius:30px;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* Quote */
+.quote-box{
+    margin-top:36px;
+    padding:28px;
+    border-radius:16px;
+    background:#1a0f30;
+    font-style:italic;
+    text-align:center;
+    color:#cfcfe3;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills-section{
+    padding:80px 80px 40px;
+    position:relative;
+    z-index:1;
+}
+.skills-section h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+}
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+}
+.skill-card{
+    background:#241133;
+    padding:22px;
+    border-radius:14px;
+    text-align:center;
+    font-size:14px;
+    transition:.4s cubic-bezier(.22,1,.36,1);
+}
+.skill-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 40px rgba(139,92,246,.25);
+}
+
+/* ========== FOOTER (SAME AS HOME) ========== */
+.footer{
+    background:radial-gradient(circle at top left,#2b0a3d,#0b0616);
+    padding:60px 40px 30px;
+}
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+.footer h3{margin-bottom:15px}
+.footer p{color:#b6b6c3;font-size:14px}
+.footer-contact p{display:flex;gap:10px;margin-bottom:10px}
+.footer-contact i{color:#a855f7}
+.social-icons{display:flex;gap:15px}
+.social-icons a{
+    width:42px;height:42px;
+    background:#1a1028;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#c4b5fd;
+}
+.footer-bottom{
+    border-top:1px solid #241133;
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#8b8ba7;
+    font-size:13px;
+}
+
+/* ========== ANIMATIONS ========== */
+.reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:.9s cubic-bezier(.22,1,.36,1);
+}
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+.delay-1{transition-delay:.15s}
+.delay-2{transition-delay:.3s}
+.delay-3{transition-delay:.45s}
+.delay-4{transition-delay:.6s}
+
+/* ========== MOBILE ========== */
+@media(max-width:900px){
+    header,.page-header,.skills-section{padding:60px 24px}
+    .skills-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+<div class="dot-cluster dots-1"></div>
+<div class="dot-cluster dots-2"></div>
+
+<header>
+<div class="logo">Guna Sekhar</div>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a class="active" href="about.html">ABOUT</a></li>
+<li><a href="projects.html">PROJECTS</a></li>
+<li><a class="contact-btn" href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="page-header">
+<h1 class="reveal delay-1">About Me</h1>
+<p class="reveal delay-2">
+Get to know more about my experience, skills, and professional journey.
+</p>
+</section>
+
+<section class="about-card reveal delay-2">
+<h2>Hello, I’m Guna Sekhar</h2>
+
+<p>
+I am a Computer Science Engineering student with interests in f<b>rontend development, data analytics, and machine learning</b>. I enjoy creating modern, responsive web interfaces and working with data to build meaningful applications. I have hands-on experience with<B> HTML, CSS, JavaScript, Python, and basic ML </B> academic and mini projects. I am continuously learning and exploring new technologies to improve my development and problem-solving skills.
+</p>
+<a href="./Guna sekhar-RESUME.pdf" download class="download-btn">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
+<div class="quote-box">
+“When you feel Like <B>QUITING</B>, Remember Why you <B>STARTED</B>.”
+</div>
+</section>
+
+<section class="skills-section">
+<h2 class="reveal delay-1">My Skills</h2>
+
+<div class="skills-grid reveal delay-2">
+<div class="skill-card">Python</div>
+<div class="skill-card">SQL</div>
+<div class="skill-card">Power BI</div>
+<div class="skill-card">Excel</div>
+<div class="skill-card">Data Analysis</div>
+<div class="skill-card">HTML,CSS,JS</div>
+<div class="skill-card">Fitness</div>
+<div class="skill-card">Reporting</div>
+<div class="skill-card">Team Management</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+<div>
+<h3>Tandyala Guna Sekhar</h3>
+<p>Data Analyst, Frontend Developer</p>
+</div>
+<div class="footer-contact">
+<h3>Contact</h3>
+<p><i class="fa-solid fa-envelope"></i> tgunasekhar23@email.com</p>
+<p><i class="fa-solid fa-phone"></i> +91 6303753034</p>
+<p><i class="fa-solid fa-location-dot"></i> India</p>
+</div>
+<div>
+<h3>Connect</h3>
+<div class="social-icons">
+<a href="https://www.linkedin.com/in/gunasekhar-tandyala/"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/mr_july_07_/"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://github.com/gunaskhr23"><i class="fa-brands fa-github"></i></a>
+<a href="#"><i class="fa-brands fa-snapchat"></i></a>
+<a href="tgunasekhar23@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+© 2025 Tandyala Guna Sekhar. All rights reserved.
+</div>
+</footer>
+
+<script>
+const items=document.querySelectorAll('.reveal');
+const show=()=>items.forEach(i=>{
+if(i.getBoundingClientRect().top<window.innerHeight*.85)
+i.classList.add('active')
+});
+window.addEventListener('scroll',show);
+window.addEventListener('load',show);
+</script>
+
+</body>
+</html>

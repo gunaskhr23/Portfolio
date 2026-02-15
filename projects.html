@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Tandyala Guna Sekhar</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+ 
+   body{
+      font-family:'Poppins',sans-serif;
+      color:#fff;
+      overflow-x:hidden;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.25), transparent 45%),
+        radial-gradient(circle at top right, rgba(124,58,237,0.35), transparent 45%),
+        #020617;
+    }
+
+a{
+  word-wrap:break-word;
+}
+a{
+  text-decoration: none;
+}
+
+
+/* Make everything flexible */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Images responsive */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* Navbar responsive */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  padding:0;
+}
+
+@media(max-width:768px){
+
+  nav ul{
+    flex-direction:column;
+    width:100%;
+    text-align:center;
+  }
+
+  h1{
+    font-size:26px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  .container{
+    padding:15px;
+  }
+
+  section{
+    padding:30px 15px;
+  }
+}
+
+
+    .bg-blob{position:absolute;width:420px;height:420px;filter:blur(90px);z-index:0}
+    .blob-1{top:-120px;left:-120px;background:radial-gradient(circle,rgba(56,189,248,.35),transparent 70%)}
+    .blob-2{top:80px;right:-150px;background:radial-gradient(circle,rgba(124,58,237,.35),transparent 70%)}
+
+    header{
+      padding:24px 80px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:relative;
+      z-index:3
+    }
+
+    .logo{font-size:22px;font-weight:600}
+
+    nav ul{list-style:none;display:flex;gap:32px}
+
+    nav a{color:#c7d2fe;text-decoration:none;font-size:14px;padding:6px 12px;border-radius:6px}
+
+    nav a.active{border:1px solid #38bdf8;color:#fff}
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:120px 40px 100px;
+      position:relative;
+      z-index:2
+    }
+
+    .section-title{text-align:center;margin-bottom:70px}
+    .section-title h2{font-size:46px;margin-bottom:12px}
+    .section-title p{color:#94a3b8;font-size:15px}
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px
+    }
+
+    .project-card{
+      background:#0f172a;
+      border-radius:22px;
+      padding:32px;
+      transition:.45s cubic-bezier(.22,1,.36,1);
+      box-shadow:0 30px 70px rgba(0,0,0,.45)
+    }
+
+    .project-card:hover{
+      transform:translateY(-12px);
+      box-shadow:0 30px 80px rgba(56,189,248,.35)
+    }
+     
+    .project-card i{font-size:38px;color:#38bdf8;margin-bottom:20px}
+    .project-card h3{font-size:22px;margin-bottom:12px}
+    .project-card p{font-size:14px;color:#cbd5f5;margin-bottom:18px;line-height:1.8}
+    .tech-stack{font-size:13px;color:#7dd3fc}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.22,1,.36,1)}
+    .reveal.active{opacity:1;transform:translateY(0)}
+    .delay-1{transition-delay:.15s}
+    .delay-2{transition-delay:.3s}
+    .delay-3{transition-delay:.45s}
+
+    footer{
+      border-top:1px solid #1e293b;
+      padding:30px;
+      text-align:center;
+      font-size:13px;
+      color:#94a3b8;
+      position:relative;
+      z-index:2
+    }
+
+    @media(max-width:768px){
+      header{padding:20px 30px}
+      .container{padding:100px 25px}
+    }
+    /* ================= MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .hero,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 300px;
+    height: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 18px 24px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 90px 20px 70px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .project-card,
+  .contact-info,
+  .contact-form {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-image img {
+    width: 240px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+    
+  
+  </style>
+</head>
+<body>
+
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+
+<header>
+  <div class="logo">Guna Sekhar</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>  
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a class="active" href="projects.html">PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="container">
+  <div class="section-title reveal delay-1">
+    <h2>My Projects</h2>
+    <p>Academic and mini projects based on my resume</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal delay-1">
+      <i class="fa-solid fa-user-check"></i>
+      <h3>Student Attendance Management System</h3>
+      <p>A Python-based application to manage student records and automate attendance tracking.</p>
+      <div class="tech-stack">Python</div>
+    </div>
+
+    <div class="project-card reveal delay-2">
+      <a href="https://github.com/gunaskhr23/Loan-Prediction "><i class="fa-solid fa-chart-line"></i>
+      <h3>Loan Prediction Application</h3>
+      <p>Machine learning model that predicts loan approval status, deployed using Streamlit.</p>
+      <div class="tech-stack">Python • Machine Learning • Streamlit</div></a>
+    </div>
+
+    <div class="project-card reveal delay-3">
+      <a href="https://gunaskhr23.github.io/Musclefactory/" class="no-underline">
+      <i class="fa-solid fa-dumbbell"></i>
+      <h3>Muscle Factory Website</h3>
+      <p>Responsive fitness website showcasing gym services, programs, and modern UI design.</p>
+      <div class="tech-stack">HTML • CSS • JavaScript</div></a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Tandyala Guna Sekhar. All rights reserved.
+</footer>
+
+<script>
+  const reveals=document.querySelectorAll('.reveal');
+  const revealOnScroll=()=>{
+    const h=window.innerHeight*0.85;
+    reveals.forEach(el=>{
+      if(el.getBoundingClientRect().top<h){el.classList.add('active')}
+    })
+  }
+  window.addEventListener('scroll',revealOnScroll)
+  window.addEventListener('load',revealOnScroll)
+</script>
+
+</body>
+</html>
